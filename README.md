@@ -1,42 +1,134 @@
-# Novatec Châssis - Site Web React
+# 🏗️ Novatec Châssis Bruxelles
 
-Site web moderne et performant pour Novatec Châssis, spécialiste en réparation et installation de châssis à Bruxelles.
+Site web moderne et responsive pour Novatec Châssis, spécialiste de la réparation et installation de châssis PVC, ALU et Bois à Bruxelles.
 
 ## 🚀 Technologies Utilisées
 
 - **React 18** - Framework JavaScript moderne
-- **Vite** - Build tool ultra-rapide
+- **Vite** - Build tool rapide et performant
 - **TailwindCSS** - Framework CSS utility-first
-- **Framer Motion** - Animations fluides
-- **React Hook Form** - Gestion des formulaires
+- **React Router DOM** - Routing côté client
+- **Font Awesome** - Icônes vectorielles
 
 ## 📦 Installation
 
+### Prérequis
+
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
+
+### Installation des dépendances
+
 ```bash
-# Installer les dépendances
 npm install
+```
 
-# Lancer le serveur de développement
+## 🔧 Développement
+
+Lancer le serveur de développement :
+
+```bash
 npm run dev
+```
 
-# Build pour la production
+Le site sera accessible sur `http://localhost:5173`
+
+## 🏭 Production
+
+### Build de production
+
+```bash
 npm run build
+```
 
-# Prévisualiser le build
+Les fichiers optimisés seront générés dans le dossier `dist/`
+
+### Prévisualiser le build
+
+```bash
 npm run preview
 ```
 
-## 🏗️ Structure du Projet
+## 📱 Fonctionnalités
+
+### Pages
+
+- **Accueil** - Présentation générale des services
+- **Qui Sommes Nous** - Histoire et valeurs de l'entreprise
+- **Nos Prestations** - Services détaillés avec images
+- **Zones d'Interventions** - Communes de Bruxelles desservies
+
+### Sections Principales
+
+- 🎯 **Hero** - Section d'accueil avec CTA
+- 🔧 **Services Détaillés** - PVC, Bois, Alu, Portes coulissantes
+- 🔩 **Quincailleries** - Types de pièces remplacées (6 types)
+- 🏢 **Marques** - Partenaires quincailliers (Roto, Maco, Sigenia, etc.)
+- ⚡ **Urgence 24/7** - Call-to-action pour dépannage urgent
+- 💬 **Témoignages** - Avis clients et statistiques
+- ❓ **FAQ** - Questions fréquentes
+- 📞 **Contact** - Formulaire avec redirection WhatsApp
+
+### Optimisations
+
+- ✅ **100% Responsive** - Mobile, Tablette, Desktop
+- ✅ **Animations CSS** - Transitions fluides
+- ✅ **Images optimisées** - Tailles adaptatives
+- ✅ **Logos adaptatifs** - Redimensionnement automatique
+- ✅ **WhatsApp Integration** - Contact direct depuis le formulaire
+- ✅ **SEO Friendly** - Structure sémantique
+
+## 🎨 Couleurs du Brand
+
+- **Primary** : `#1e3a8a` (Bleu foncé)
+- **Secondary** : `#10b981` (Vert)
+- **Accent** : `#22c55e` (Vert clair)
+
+## 📞 Contact
+
+- **Téléphone** : +32 486 39 00 68
+- **Email** : info@novatec-chassis.be
+- **Zone** : Bruxelles et environs
+
+## 🌐 Déploiement
+
+### Vercel (Recommandé)
+
+1. Connectez votre dépôt GitHub à Vercel
+2. Configurez le build :
+   - **Build Command** : `npm run build`
+   - **Output Directory** : `dist`
+   - **Install Command** : `npm install`
+3. Déployez !
+
+### Netlify
+
+1. Connectez votre dépôt GitHub à Netlify
+2. Configurez le build :
+   - **Build Command** : `npm run build`
+   - **Publish Directory** : `dist`
+3. Déployez !
+
+### GitHub Pages
+
+```bash
+npm run build
+# Déployer le contenu du dossier dist/ sur GitHub Pages
+```
+
+## 📄 Structure du Projet
 
 ```
 novatec-react/
 ├── public/
-│   └── images/          # Images et assets statiques
+│   └── images/          # Images du site
 ├── src/
 │   ├── components/      # Composants React
 │   │   ├── Header.jsx
 │   │   ├── Hero.jsx
-│   │   ├── Services.jsx
+│   │   ├── ServicesDetailles.jsx
+│   │   ├── Quincailleries.jsx
+│   │   ├── Marques.jsx
 │   │   ├── Benefits.jsx
 │   │   ├── EmergencyCTA.jsx
 │   │   ├── Testimonials.jsx
@@ -44,150 +136,28 @@ novatec-react/
 │   │   ├── ContactForm.jsx
 │   │   ├── Footer.jsx
 │   │   └── WhatsAppWidget.jsx
-│   ├── App.jsx          # Composant principal
-│   ├── main.jsx         # Point d'entrée
-│   └── index.css        # Styles globaux
-├── index.html
-├── vite.config.js
-├── tailwind.config.js
-└── package.json
+│   ├── pages/          # Pages de l'application
+│   │   ├── Home.jsx
+│   │   ├── QuiSommesNous.jsx
+│   │   ├── NosPrestations.jsx
+│   │   └── ZonesInterventions.jsx
+│   ├── App.jsx         # Composant principal
+│   ├── main.jsx        # Point d'entrée
+│   └── index.css       # Styles globaux
+├── index.html          # Template HTML
+├── package.json        # Dépendances
+├── vite.config.js      # Configuration Vite
+└── tailwind.config.js  # Configuration TailwindCSS
 ```
 
-## 🎨 Caractéristiques
+## 📝 Licence
 
-### ✨ Page Unique (SPA)
-- Navigation fluide sans rechargement
-- Scroll smooth entre les sections
-- Animations modernes et performantes
+© 2026 Novatec Châssis Bruxelles. Tous droits réservés.
 
-### 📱 Responsive Design
-- Optimisé pour tous les écrans (mobile, tablette, desktop)
-- Menu mobile adaptatif
-- Images optimisées
+## 🤝 Support
 
-### 🎯 Sections Principales
-
-1. **Hero** - Section d'accueil avec CTA puissants
-2. **Services** - Tous les services regroupés (8 cartes)
-3. **Benefits** - 4 avantages clés
-4. **Emergency CTA** - Appel à l'action pour dépannage urgent
-5. **Testimonials** - Témoignages clients
-6. **FAQ** - Questions fréquentes avec accordéon
-7. **Contact** - Formulaire de contact complet
-8. **Footer** - Pied de page avec liens et zones d'intervention
-
-### 🔥 Fonctionnalités
-
-- ✅ Formulaire de contact avec validation
-- ✅ Widget WhatsApp flottant
-- ✅ Bannière d'urgence fixe (desktop)
-- ✅ Menu déroulant pour les services
-- ✅ FAQ avec accordéon interactif
-- ✅ Animations au scroll
-- ✅ Boutons d'appel direct
-- ✅ SEO optimisé
-
-## 🎨 Palette de Couleurs
-
-```javascript
-colors: {
-  primary: '#0066CC',      // Bleu principal
-  secondary: '#00A86B',    // Vert secondaire
-  accent: '#FF6B35',       // Orange accent
-  dark: '#1a1a1a',         // Noir
-  light: '#f8f9fa',        // Gris clair
-}
-```
-
-## 📞 Contact
-
-- **Téléphone :** +32 486 39 00 68
-- **Email :** info@novatec-chassis.be
-- **Zone :** Bruxelles & alentours
-
-## 🚀 Déploiement
-
-### Build de Production
-
-```bash
-npm run build
-```
-
-Les fichiers optimisés seront générés dans le dossier `dist/`.
-
-### Hébergement Recommandé
-
-- **Vercel** (recommandé pour React)
-- **Netlify**
-- **GitHub Pages**
-- **Serveur web classique** (Apache, Nginx)
-
-### Configuration pour serveur web
-
-Si vous déployez sur un serveur web classique, assurez-vous de configurer les redirections pour le SPA :
-
-**Apache (.htaccess) :**
-```apache
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
-</IfModule>
-```
-
-**Nginx :**
-```nginx
-location / {
-  try_files $uri $uri/ /index.html;
-}
-```
-
-## 🔧 Personnalisation
-
-### Modifier les couleurs
-
-Éditez `tailwind.config.js` :
-
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: '#VotreCouleur',
-      // ...
-    }
-  }
-}
-```
-
-### Ajouter une section
-
-1. Créer un nouveau composant dans `src/components/`
-2. L'importer dans `App.jsx`
-3. L'ajouter dans le JSX de `App.jsx`
-
-### Modifier le contenu
-
-Les données sont directement dans les composants. Pour un site plus dynamique, vous pouvez :
-- Créer des fichiers JSON dans `src/data/`
-- Utiliser un CMS headless (Strapi, Contentful)
-- Connecter une API
-
-## 📝 TODO / Améliorations Futures
-
-- [ ] Ajouter un système de backend pour les formulaires
-- [ ] Intégrer Google Analytics
-- [ ] Ajouter un blog
-- [ ] Multilingue (FR/NL)
-- [ ] PWA (Progressive Web App)
-- [ ] Système de réservation en ligne
-
-## 📄 Licence
-
-© 2026 Novatec Châssis. Tous droits réservés.
+Pour toute question technique, contactez l'équipe de développement.
 
 ---
 
-**Développé avec ❤️ en React + Vite + TailwindCSS**
+Développé avec ❤️ pour Novatec Châssis Bruxelles
